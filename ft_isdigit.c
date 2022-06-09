@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarferre <sarferre@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/06 16:58:27 by sarferre          #+#    #+#             */
-/*   Updated: 2022/05/09 11:13:15 by sarferre         ###   ########.fr       */
+/*   Created: 2022/06/06 21:06:02 by sarferre          #+#    #+#             */
+/*   Updated: 2022/06/06 21:06:15 by sarferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

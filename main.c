@@ -25,8 +25,8 @@ int main(void)
 	//char sh[] = "sarah";
 	//printf("ft\t%s\n", ft_strchr(sh, 65));
 	//printf("std\t%s\n", strchr(sh, 65));
-    //char sh[] = "sarah";
-	//printf("%s\n", ft_strrchr(sh, 'a'));
+    char sh[] = "sarah";
+	printf("%s\n", ft_strrchr(sh, 'b'));
 	//printf("%i\n", ft_strncmp("sarah", "sara", 4)); 
 	//char sh[] = "sarah";
 	//char sh1[] = "sarah";
@@ -36,19 +36,23 @@ int main(void)
 	//printf("%s\n", ft_memchr(sh, 'a', 5));
 	//char dst[] = "sarah";
 	//char src[] = "bessa";
-	//size_t dstsize = 5;
+	//size_t dstsize = 10;
 	//char dst1[] = "sarah";
 	//char src1[] = "bessa";
 	//printf("%lu\n", ft_strlcat(dst, src, dstsize));
  	//printf("%lu\n", strlcat(dst1, src1, dstsize));
+ 	//printf("%s\n", dst);
+ 	//printf("%s\n", dst1);
 	//char sh[] = "sarah";
 	//char sh1[] = "sarah";
 	//printf("%d\n", ft_memcmp(sh, sh1, 5));	
-	//char sh[] = "procurando o nemo";
-	//char sh1[] = "nemo";
-	//printf("%s\n", ft_strnstr(sh, sh1, 5));
+	//char sh[] = "olasos";
+	//char sh1[] = "la";
+	//printf("%s\n", ft_strnstr(sh, sh1, 8));
     //printf("%i\n", ft_atoi("2022"));
-	printf(
+	//char sh[6] = "saaah";
+    //printf("src = %p\t%s\n", sh, sh);
+    //printf("dst = %p\t%s\n", ft_strdup(sh), ft_strdup(sh));
 	return (0);
 
 }

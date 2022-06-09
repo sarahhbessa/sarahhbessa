@@ -6,16 +6,16 @@
 /*   By: sarferre <sarferre@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:24:12 by sarferre          #+#    #+#             */
-/*   Updated: 2022/05/12 16:29:07 by sarferre         ###   ########.fr       */
+/*   Updated: 2022/06/06 15:18:33 by sarferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
-	i = 1;
+	i = 0;
 	while (s[i] != '\0')
 		i++;
 	return (i);

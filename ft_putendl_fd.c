@@ -6,7 +6,7 @@
 /*   By: sarferre <sarferre@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 15:39:21 by sarferre          #+#    #+#             */
-/*   Updated: 2022/06/06 20:25:19 by sarferre         ###   ########.fr       */
+/*   Updated: 2022/06/11 14:03:07 by sarferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,9 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (s)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		ft_putstr_fd(s, fd);
+		ft_putchar_fd('\n', fd);
 	}
-	write(fd, '\n',  1);
 }
-

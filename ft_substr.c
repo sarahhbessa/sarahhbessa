@@ -6,7 +6,7 @@
 /*   By: sarferre <sarferre@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 15:35:16 by sarferre          #+#    #+#             */
-/*   Updated: 2022/06/07 19:02:05 by sarferre         ###   ########.fr       */
+/*   Updated: 2022/06/11 13:41:00 by sarferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,18 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	char	*ret;
-	
-	ret = (char *)malloc(sizeof(char ) * (len + 1));
-	if(!ret)
-		return(NULL);
-	i = 0;
-	while (s[i] != '\0' && i < start)
-		i++;
+	char	*result;
 
-
-	printf("%c\n", s[i]);
-		return(ret);
-}
-
-int main(void)
-{
-	char const s[] = "bom dia caralho";
-	size_t len = 3;
-	unsigned int start = 4;
-
-	printf("%s\n", ft_substr(s, start, len));
-	return (0);
+	if (!s)
+		return (NULL);
+	if ((size_t)start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (ft_strlen(s) - start >= len)
+		result = malloc(len + 1);
+	else
+		result = malloc(ft_strlen(s) - start + 1);
+	if (!result)
+		return (NULL);
+	ft_strlcpy(result, s + start, len + 1);
+	return (result);
 }

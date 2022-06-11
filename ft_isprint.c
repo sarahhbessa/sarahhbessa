@@ -6,9 +6,12 @@
 /*   By: sarferre <sarferre@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 12:06:51 by sarferre          #+#    #+#             */
-/*   Updated: 2022/06/06 14:36:38 by sarferre         ###   ########.fr       */
+/*   Updated: 2022/06/11 18:32:06 by sarferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)

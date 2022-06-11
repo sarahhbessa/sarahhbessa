@@ -6,28 +6,41 @@
 /*   By: sarferre <sarferre@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 21:32:35 by sarferre          #+#    #+#             */
-/*   Updated: 2022/05/31 22:18:11 by sarferre         ###   ########.fr       */
+/*   Updated: 2022/06/11 15:29:10 by sarferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+static int	is_space(char c)
 {
+	return (c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == '\f'
+		|| c == ' ');
+}
 
-	int i;
-	int j;
-	int res;
+int	ft_atoi(const char *str)
+{
+	int					sign;
+	unsigned long int	result;
+	size_t				i;
 
+	result = 0;
+	sign = 1;
 	i = 0;
-	j = 1;
-	res = 0;
-
-	while (*str >= '0' && *str <= '9')
+	while (str[i] != '\0' && is_space(str[i]))
+		i++;
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while (str[i] != '\0' && ft_isdigit(str[i]))
 	{
-		res = (res * 10) + *str - '0';
-		str++;
+		if (result >= 9223372036854775807 && sign == 1)
+			return (-1);
+		if (result > 9223372036854775807 && sign == -1)
+			return (0);
+		result = (str[i] - '0') + (result * 10);
+		i++;
 	}
-	return (res);
-
+	return (result * sign);
 }
